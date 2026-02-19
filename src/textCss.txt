@@ -1,0 +1,357 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Smooth transitions everywhere */
+body{
+  font-family: "Poppins", sans-serif;
+  animation: pageLoad 1s ease forwards;
+  opacity: 0;
+  background-image: url('./8728.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* PAGE LOAD ANIMATION */
+@keyframes pageLoad{
+  to{
+    opacity: 1;
+  }
+}
+
+/* NAVBAR */
+.mainnav{
+  width: 100dvw;
+  padding: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navheading1{
+  width: 65%;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.navheading1 p{
+  margin-left: 30px;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.navheading1 p:hover{
+  color: #555;
+  transform: translateY(-3px);
+}
+
+.navheading2{
+  font-size: 16px;
+  width: 50%;
+  margin-right: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+/* NAV LINK HOVER EFFECT */
+.nav-anchor{
+  width: 204px;
+  height: 100px;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: black;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.nav-anchor:hover{
+  transform: translateY(-5px);
+}
+
+.nav-anchor hr{
+  border: none;
+  height: 2px;
+  background: black;
+  width: 0%;
+  transition: width 0.4s ease;
+}
+
+.nav-anchor:hover hr{
+  width: 100%;
+}
+
+.nav-anchor-inner{
+  display: flex;
+  justify-content: space-between;
+  font-size: 25px;
+  transition: 0.3s ease;
+}
+
+.nav-anchor:hover .nav-anchor-inner{
+  color: #444;
+}
+
+/* HERO SECTION --------------------------------------------------------------------------------------*/ 
+
+.page1{
+  display: flex;
+  height: 85vh;
+}
+
+.intro{
+  width: 50dvw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro-inner{
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 24px;
+}
+
+.intro-inner h1{
+  font-size: 3.5rem;
+  font-weight: 600;
+  animation: slideUp 1s ease forwards;
+  opacity: 0;
+}
+
+#hello{
+  font-weight: 200;
+}
+
+.intro-inner h2{
+  font-size: 2rem;
+}
+
+.intro-inner p{
+  font-size: 1.2rem;
+}
+
+.intro-inner h3{
+  font-size: 1.5rem;
+}
+
+@keyframes slideUp{
+  from{
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* PRODUCT DESIGNER LINE */
+#productDesigner{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 35vw;
+}
+
+#productDesigner hr{
+  width: 10vw;
+  height: 1px;
+  border: 1px solid black;
+}
+
+/* BUTTONS */
+#button{
+  display: flex;
+  gap: 20px;
+}
+
+.button1{
+  cursor: pointer;
+  font-size: 20px;
+  padding: 15px 25px;
+  border-radius: 50px;
+  background-color: black;
+  color: white;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+/* BUTTON HOVER EFFECT */
+.button1:hover{
+  background-color: #333;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* BUTTON CLICK EFFECT */
+.button1:active{
+  transform: scale(0.95);
+}
+
+/* IMAGE SECTION */
+.pic{
+  width: 50dvw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInRight 1.2s ease forwards;
+  opacity: 0;
+}
+.pic img{
+  height: 100%;
+}
+
+@keyframes fadeInRight{
+  from{
+    transform: translateX(60px);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* STRIP */
+.strip{
+  padding: 10px 0px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+/* PROJECTS  PAGE 2 --------------------------------------------------------------------------------------*/ 
+
+.page2{
+  width: 100dvw;
+  height: 85dvh;
+  padding: 20px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.page2 h1{
+  font-size: 60px;
+}
+.projects{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+.projects-cards{
+  width: 30vw;
+  background-color: rgba(128, 128, 128, 0.233);
+  border: 2px solid black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 30px 20px;
+  cursor: pointer;
+  gap: 10px;
+  transition: 0.3s ease;
+}
+.projects-cards:hover{
+  transform: translateY(-5px);
+}
+.projects-cards h3{
+  font-size: 24px;
+}
+.projects-cards img{
+  max-width: 400px;
+}
+
+/* SKILLS PAGE 3--------------------------------------------------------------------------------------*/
+.page3{
+  width: 100dvw;
+  height: 100dvh;
+  padding: 20px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.page3 h1{
+  font-size: 60px;
+} 
+.projects1{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+.skill-cards{
+  width: 20vw;
+  height: 270px;
+  padding: 10px 20px;
+  background-color: rgba(128, 128, 128, 0.233);
+  border: 2px solid black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
+  transition: 0.3s ease-in;
+}
+.skill-cards:hover{
+  transform: translateY(-5px);
+}
+
+.skill-cards h3{
+  font-size: 24px;
+}
+.skill-cards img{
+ height: 250px;
+}
+
+/* ABOUT ME PAGE 4--------------------------------------------------------------------------------------*/
+.page4{
+  width: 100dvw;
+  height: 85dvh;
+  padding: 20px 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.page4 h1{
+  font-size: 60px;
+} 
+.page4 p{
+  font-size: 20px;
+}
+
