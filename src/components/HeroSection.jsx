@@ -29,7 +29,7 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="pic">
-            <img src="./Saurabhpic.png" alt="Saurabh Pic" />
+            <img fetchpriority="high" loading='lazy' src="./Saurabhpic.png" alt="Saurabh Pic" />
         </div>
       </div>
       <div className="strip">
